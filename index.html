@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoonLog</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+    <!-- 공통 헤더 -->
+    <header id="header"></header>
+
+    <div class="layout">
+
+        <!-- 공통 사이드 메뉴 -->
+        <aside id="sidebar"></aside>
+
+        <!-- 페이지별 내용 -->
+        <main>
+            <section class="intro">
+                <div id="top-title">
+                    <div>
+                        <h2>MoonLog</h2>
+                        <p>개발하고, 배우고, 기록하는 공간입니다.</p>
+                    </div>
+
+                    <form action="#" method="GET">
+                        <div id="search-bar">
+                            <input type="text" placeholder="검색어를 입력해 주세요">
+                            <input type="submit" value="검색">
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="posts">
+                <h2>최근 게시글</h2>
+
+                <article>
+                    <span class="post-author">작성자 · Moon</span>
+                    <h3><a href="#">FastAPI 개발 기록</a></h3>
+                    <div class="post-info">
+                        <span class="tag">Python</span>
+                        <span class="tag">FastAPI</span>
+                        <span>2026-11-05</span>
+                        <span>조회수 128</span>
+                    </div>
+                </article>
+
+                <article>
+                    <span class="post-author">작성자 · Moon</span>
+                    <h3><a href="#">JavaScript 공부 기록</a></h3>
+                    <div class="post-info">
+                        <span class="tag">JavaScript</span>
+                        <span>2026-11-01</span>
+                        <span>조회수 56</span>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- 공통 푸터 -->
+    <footer id="footer"></footer>
+
+    <script src="./js/components/common.js"></script>
+</body>
+</html>
