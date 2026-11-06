@@ -1,0 +1,78 @@
+/* 개인정보처리방침 전용 스타일: 기존 style.css와 분리 */
+.privacy-page {
+    color: var(--text);
+}
+
+.privacy-page .privacy-heading {
+    margin-bottom: 30px;
+}
+
+.privacy-page .privacy-heading h2 {
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+
+.privacy-page .privacy-heading p {
+    margin: 4px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.privacy-page .privacy-notice {
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.privacy-page .privacy-toc,
+.privacy-page .privacy-section {
+    padding: 25px;
+    margin-bottom: 20px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.privacy-page .privacy-toc h3,
+.privacy-page .privacy-section h3 {
+    margin: 0 0 18px;
+    font-size: 18px;
+}
+
+.privacy-page .privacy-toc a {
+    display: block;
+    margin: 10px 0;
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.privacy-page .privacy-toc a:hover,
+.privacy-page .privacy-section a:hover {
+    color: var(--aqua);
+}
+
+.privacy-page .privacy-section p,
+.privacy-page .privacy-section li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.privacy-page .privacy-section p {
+    margin: 12px 0;
+}
+
+.privacy-page .privacy-section ul {
+    padding-left: 22px;
+}
+
+.privacy-page .privacy-section li {
+    margin-bottom: 8px;
+}
+
+.privacy-page .privacy-section a {
+    color: var(--accent);
+}

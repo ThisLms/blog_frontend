@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投稿 | MoonLog</title>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/pages/post.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div class="layout">
+        <aside id="sidebar"></aside>
+        <main class="post-write-page">
+            <div class="post-write-heading">
+                <h2>投稿</h2>
+                <p>学んだことや開発の記録を残しましょう。</p>
+            </div>
+            <form id="post-write-form" novalidate>
+                <div id="post-write-edit-fields">
+                    <div class="post-write-field">
+                        <label for="post-write-title">タイトル</label>
+                        <input id="post-write-title" name="title" type="text" maxlength="150" placeholder="タイトルを入力してください" required>
+                    </div>
+                    <div class="post-write-meta">
+                        <div class="post-write-field">
+                            <label for="post-write-category">カテゴリー</label>
+                            <select id="post-write-category" name="category" required>
+                                <option value="">カテゴリーを選択してください</option>
+                                <option value="Python">Python</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="HTML-CSS">HTML / CSS</option>
+                            </select>
+                        </div>
+                        <div class="post-write-field post-write-tag-field">
+                            <span id="post-write-tags-label" class="post-write-field-label">タグ</span>
+                            <button type="button" id="post-write-open-tags" aria-label="タグを追加">+ タグ追加</button>
+                            <div id="post-write-selected-tags" class="post-write-selected-tags" aria-live="polite"></div>
+                            <small id="post-write-tags-help">5つまでタグを選択できます。</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-write-tabs" role="tablist" aria-label="投稿編集モード">
+                    <button type="button" id="post-write-edit-tab" role="tab" aria-selected="true" aria-controls="post-write-edit-panel">編集</button>
+                    <button type="button" id="post-write-preview-tab" role="tab" aria-selected="false" aria-controls="post-write-preview-panel" tabindex="-1">プレビュー</button>
+                </div>
+                <section id="post-write-edit-panel" role="tabpanel" aria-labelledby="post-write-edit-tab">
+                    <div class="post-write-editor-heading">
+                        <label for="post-write-markdown">本文 (Markdown)</label>
+                    </div>
+                    <div class="post-write-editor-pane">
+                        <textarea id="post-write-markdown" name="content" spellcheck="false" placeholder="# タイトル&#10;&#10;内容を入力してください..." required></textarea>
+                    </div>
+                </section>
+                <section id="post-write-preview-panel" role="tabpanel" aria-labelledby="post-write-preview-tab" hidden>
+                    <article class="post-write-article-preview">
+                        <header class="post-write-article-header">
+                            <h1 id="post-write-preview-title"></h1>
+                            <div class="post-write-article-meta">
+                                <span id="post-write-preview-category"></span>
+                                <span id="post-write-preview-tags"></span>
+                            </div>
+                        </header>
+                        <div id="post-write-preview" class="post-write-markdown-body"></div>
+                    </article>
+                    <p class="post-write-preview-note">これは公開前のプレビューです。投稿はまだ保存されていません。</p>
+                </section>
+                <dialog id="post-write-tag-dialog" class="post-write-tag-dialog" aria-labelledby="post-write-tag-dialog-title">
+                    <div class="post-write-tag-dialog-inner">
+                        <div class="post-write-tag-dialog-header">
+                            <h3 id="post-write-tag-dialog-title">タグ選択</h3>
+                            <button type="button" id="post-write-close-tags" aria-label="タグ選択を閉じる">×</button>
+                        </div>
+                        <label for="post-write-tag-search">タグ検索</label>
+                        <input type="search" id="post-write-tag-search" placeholder="タグ名検索" autocomplete="off">
+                        <p id="post-write-tag-status" class="post-write-tag-status" role="status" aria-live="polite"></p>
+                        <div id="post-write-tag-options" class="post-write-tag-options" role="group" aria-label="選択可能なタグ"></div>
+                        <p id="post-write-tag-count" class="post-write-tag-count">0 / 5個 選択済み</p>
+                        <div class="post-write-tag-dialog-actions">
+                            <button type="button" id="post-write-cancel-tags">閉じる</button>
+                            <button type="button" id="post-write-apply-tags">選択完了</button>
+                        </div>
+                    </div>
+                </dialog>
+                <p id="post-write-error" class="post-write-error" role="alert" hidden></p>
+                <div class="post-write-actions">
+                    <button type="button" id="location-home"><a href="../../index.html">ホームへ</a></button>
+                    <button type="button" id="post-write-clear">初期化</button>
+                    <button type="submit" id="post-write-submit">投稿</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer id="footer"></footer>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script defer src="../../js/components/common.js"></script>
+    <script defer src="../../js/pages/post.js"></script>
+</body>
+</html>

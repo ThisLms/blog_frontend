@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MoonLog</title>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/pages/login.css">
+</head>
+<body>
+    <!-- 공통 헤더 -->
+    <header id="header"></header>
+
+    <div class="layout">
+
+        <!-- 공통 사이드 메뉴 -->
+        <aside id="sidebar"></aside>
+        
+        <!-- 페이지별 내용 -->
+        <main class="login-page">
+            <section class="login-card" aria-labelledby="login-title">
+                <h2 id="login-title">Login</h2>
+                <p class="login-description">MoonLogにログインし、すべての投稿をご覧ください</p>
+                <form id="login-form" method="post">
+                    <div class="login-field">
+                        <label for="login-id">ID</label>
+                        <input id="login-id" name="user_id" type="text" autocomplete="username" maxlength="20" required placeholder="IDを入力してください">
+                    </div>
+                    <div class="login-field">
+                        <label for="login-password">PW</label>
+                        <input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="パスワードを入力してください">
+                    </div>
+                    <p id="login-error" role="alert" aria-live="polite" hidden></p>
+                    <button type="submit">ログイン</button>
+                </form>
+                <p class="login-signup">アカウントがないですか? <a href="/pages/signup.html">会員登録</a></p>
+                <p class="login-signup"><a href="../../index.html">メイン画面へ</a></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- 공통 푸터 -->
+    <footer id="footer"></footer>
+    <script src="../../js/components/common.js" defer></script>
+    <script src="../../js/pages/login.js" defer></script>
+</body>
+</html>
